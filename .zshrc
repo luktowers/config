@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
+plugins=(
   zsh-autosuggestions  
   zsh-syntax-highlighting
   )
@@ -106,20 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # On-demand rehash
 zshcache_time="$(date +%s%N)"
 
-autoload -Uz add-zsh-hook
-
-rehash_precmd() {
-  if [[ -a /var/cache/zsh/pacman ]]; then
-    local paccache_time="$(date -r /var/cache/zsh/pacman +%s%N)"
-    if (( zshcache_time < paccache_time )); then
-      rehash
-      zshcache_time="$paccache_time"
-    fi
-  fi
-}
-
-add-zsh-hook -Uz precmd rehash_precmd
-
 # omz
 alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
@@ -146,13 +132,25 @@ alias gl='git log'
 
 #my
 
-
-
 precmd(){
 	precmd(){
 		echo 
 	}
 }
 
+export PATH="/home/luke/.local/bin:""$PATH"
+export PYENV_ROOT="$HOME"/.pyenv
+export PATH="$PYENV_ROOT"/bin:"$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 source ~/antigen.zsh
 
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export HADOOP_HOME=~/hadoop/hadoop-3.3.6
+export PATH=$PATH:$HADOOP_HOME/bin
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+
+export OPENAI_API_KEY="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"
