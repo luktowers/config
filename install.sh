@@ -14,7 +14,7 @@ sudo apt install zsh -yq
 chsh -s $(which zsh) $(whoami)
 
 # Install Oh My Zsh (non-interactive)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null 2>&1
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Download and copy theme
 #curl -O https://raw.githubusercontent.com/luktowers/config/main/oblivyun.zsh-theme
@@ -30,4 +30,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 #curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
 cp .zshrc ~/.zshrc
 
-source ~/.zshrc
+zsh -c 'source ~/.zshrc'
