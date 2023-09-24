@@ -30,7 +30,7 @@ curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
 # Source ~/.zshrc
 zsh -c 'source ~/.zshrc'
 
+echo 'Install Complete'
+
 # Run zsh
 exec zsh
-
-echo 'Install Complete'
