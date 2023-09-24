@@ -26,6 +26,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Download and copy .zshrc configuration
 curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
-cp .zshrc ~/.zshrc
+#cp .zshrc ~/.zshrc
 
+apt install exa
 zsh -c 'source ~/.zshrc'
