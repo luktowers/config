@@ -14,11 +14,11 @@ sudo apt install zsh -yq
 chsh -s $(which zsh) $(whoami)
 
 # Install Oh My Zsh (non-interactive)
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null 2>&1
 
 # Download and copy theme
-curl -O https://raw.githubusercontent.com/luktowers/config/main/oblivyun.zsh-theme
-cp oblivyun.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/oblivyun.zsh-theme
+#curl -O https://raw.githubusercontent.com/luktowers/config/main/oblivyun.zsh-theme
+cp oblivyun.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/
 
 # Clone zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -27,7 +27,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Download and copy .zshrc configuration
-curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
+#curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
 cp .zshrc ~/.zshrc
 
 source ~/.zshrc
