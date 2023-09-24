@@ -1,6 +1,5 @@
 # Update package list and upgrade existing packages
-sudo apt update
-sudo apt upgrade -y
+apt update && apt upgrade -y
 
 # Install Zsh
 sudo apt install zsh -y
@@ -21,11 +20,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 # Clone zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-wget -c http://old-releases.ubuntu.com/ubuntu/pool/universe/r/rust-exa/exa_0.9.0-4_amd64.deb
-sudo apt-get install ./exa_0.9.0-4_amd64.deb
+# Install exa
+sudo apt uninstall exa
 
-# Download and copy .zshrc configuration
+# Download .zshrc configuration
 curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
-#cp .zshrc ~/.zshrc
 
+# Source ~/.zshrc
 zsh -c 'source ~/.zshrc'
+
+# Run zsh
+exec zsh
