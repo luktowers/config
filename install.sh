@@ -1,12 +1,9 @@
-# Non-interactive environment setup
-export DEBIAN_FRONTEND=noninteractive
-
 # Update package list and upgrade existing packages
-sudo apt update -q
-sudo apt upgrade -yq
+sudo apt update
+sudo apt upgrade -y
 
 # Install Zsh
-sudo apt install zsh -yq
+sudo apt install zsh -y
 
 # Set Zsh as the default shell
 chsh -s $(which zsh) $(whoami)
