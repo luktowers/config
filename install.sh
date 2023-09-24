@@ -12,7 +12,7 @@ sudo apt install zsh -yq
 chsh -s $(which zsh) $(whoami)
 
 # Install Oh My Zsh (non-interactive)
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended > /dev/null 2>&1
 
 # Download and copy theme
 curl -O https://raw.githubusercontent.com/luktowers/config/main/oblivyun.zsh-theme
