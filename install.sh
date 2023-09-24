@@ -1,5 +1,5 @@
 # Update package list and upgrade existing packages
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 # Install Zsh
 sudo apt install zsh -y
