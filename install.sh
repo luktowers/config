@@ -28,5 +28,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 curl -O https://raw.githubusercontent.com/luktowers/config/main/.zshrc
 #cp .zshrc ~/.zshrc
 
-apt install exa
+wget -c http://old-releases.ubuntu.com/ubuntu/pool/universe/r/rust-exa/exa_0.9.0-4_amd64.deb
+sudo apt-get install ./exa_0.9.0-4_amd64.deb
+
 zsh -c 'source ~/.zshrc'
