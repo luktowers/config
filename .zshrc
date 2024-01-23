@@ -128,3 +128,6 @@ alias gs='git status'
 alias gl='git log'
 
 export PATH="/home/luke/.local/bin:""$PATH"
+
+
+#sudo apt update && sudo apt upgrade
