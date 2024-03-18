@@ -107,18 +107,18 @@ source $ZSH/oh-my-zsh.sh
 zshcache_time="$(date +%s%N)"
 
 
-# exa --icons
+# eza --icons
 # ls
-alias ls='exa --icons'
-alias l='exa --icons -lh'
-alias ll='exa --icons -lah'
-alias la='exa --icons -a'
-alias lm='exa --icons -m'
-alias lr='exa --icons -r'
-alias lg='exa --icons -l --group-directories-first'
+alias ls='eza --icons'
+alias l='eza --icons -lh'
+alias ll='eza --icons -lah'
+alias la='eza --icons -a'
+alias lm='eza --icons -m'
+alias lr='eza --icons -r'
+alias lg='eza --icons -l --group-directories-first'
 
 # git
-alias gcl='git clone --depth 1'
+alias gcl='git clone'
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
@@ -127,7 +127,19 @@ alias gps='git push'
 alias gs='git status'
 alias gl='git log'
 
-export PATH="/home/luke/.local/bin:""$PATH"
+#pip
+alias pa='source .venv/bin/activate'
+alias pd='deactivate'
 
+#sh
+alias sz='source ~/.zshrc'
 
-#sudo apt update && sudo apt upgrade
+#source env-spark/bin/activate export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$HOME/.local/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+
+#export SPARK_LOCAL_IP='127.0.0.1'eval "$(pyenv init --path)"
+export PATH="$PATH:/bin"
