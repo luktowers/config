@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="oblivyun"
+ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -133,13 +133,25 @@ alias pd='deactivate'
 
 #sh
 alias sz='source ~/.zshrc'
+alias upd='sudo apt update && sudo apt upgrade -y'
 
+alias scr='scrcpy'
+
+alias usg='sudo usg audit --tailoring-file ttailored.xml'
+alias usgf='sudo usg fix --tailoring-file  ttailored.xml'
 #source env-spark/bin/activate export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH="$HOME/.local/bin:$PATH"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# export PATH="$HOME/.local/bin:$PATH"
 
-export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
 
-#export SPARK_LOCAL_IP='127.0.0.1'eval "$(pyenv init --path)"
-export PATH="$PATH:/bin"
+# #export SPARK_LOCAL_IP='127.0.0.1'eval "$(pyenv init --path)"
+# export PATH="$PATH:/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+echo "$(date) - Umask set to $(umask) by $USER in session $$" >> ~/.umask_log
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
