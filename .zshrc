@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -135,10 +135,10 @@ alias pd='deactivate'
 alias sz='source ~/.zshrc'
 alias upd='sudo apt update && sudo apt upgrade -y'
 
-alias scr='scrcpy'
+alias sc='scrcpy'
 
 alias usg='sudo usg audit --tailoring-file ttailored.xml'
-alias usgf='sudo usg fix --tailoring-file  ttailored.xml'
+
 #source env-spark/bin/activate export PYENV_ROOT="$HOME/.pyenv"
 # command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
