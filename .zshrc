@@ -134,6 +134,7 @@ alias pd='deactivate'
 #sh
 alias sz='source ~/.zshrc'
 alias upd='sudo apt update && sudo apt upgrade -y'
+alias es='exec $SHELL'
 
 alias sc='scrcpy'
 
