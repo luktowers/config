@@ -138,20 +138,3 @@ alias upd='sudo apt update && sudo apt upgrade -y'
 alias sc='scrcpy'
 
 alias usg='sudo usg audit --tailoring-file ttailored.xml'
-
-#source env-spark/bin/activate export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# export PATH="$HOME/.local/bin:$PATH"
-
-# export PYENV_ROOT="$HOME/.pyenv"
-
-# #export SPARK_LOCAL_IP='127.0.0.1'eval "$(pyenv init --path)"
-# export PATH="$PATH:/bin"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-echo "$(date) - Umask set to $(umask) by $USER in session $$" >> ~/.umask_log
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
