@@ -135,7 +135,25 @@ alias pd='deactivate'
 alias sz='source ~/.zshrc'
 alias upd='sudo apt update && sudo apt upgrade -y'
 alias es='exec $SHELL'
+alias c='clear'
 
+#scrcpy
 alias sc='scrcpy'
 
 alias usg='sudo usg audit --tailoring-file ttailored.xml'
+
+#docker
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export PATH=$PATH:/home/oblivyun/pmd-bin-7.5.0/bin
+
+export SPRING_SECURITY_USER_NAME='admin'
+export SPRING_SECURITY_USER_PASSWORD='admin'
