@@ -145,7 +145,7 @@ alias usg='sudo usg audit --tailoring-file ttailored.xml'
 #docker
 alias dcu='docker compose up'
 alias dcd='docker compose down'
-
+alias dcc='docker system prune -a --volumes'
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
