@@ -73,7 +73,7 @@ ZSH_THEME="af-magic"
 plugins=(
   zsh-autosuggestions  
   zsh-syntax-highlighting
-  )
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,9 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # On-demand rehash
 zshcache_time="$(date +%s%N)"
 
+# --- Aliases ---
 
-# eza --icons
-# ls
+# eza (ls) aliases
 alias ls='eza --icons'
 alias l='eza --icons -lh'
 alias ll='eza --icons -lah'
@@ -117,8 +117,8 @@ alias lm='eza --icons -m'
 alias lr='eza --icons -r'
 alias lg='eza --icons -l --group-directories-first'
 
-# git
-alias gcl='git clone'
+# Git aliases
+alias gcn='git clone'
 alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
@@ -127,33 +127,51 @@ alias gps='git push'
 alias gs='git status'
 alias gl='git log'
 
-#pip
+# Python (pip) aliases
 alias pa='source .venv/bin/activate'
 alias pd='deactivate'
 
-#sh
+# Shell aliases
 alias sz='source ~/.zshrc'
 alias upd='sudo apt update && sudo apt upgrade -y'
 alias es='exec $SHELL'
 alias c='clear'
 
-#scrcpy
+# Scrcpy alias
 alias sc='scrcpy'
 
+# USG alias
 alias usg='sudo usg audit --tailoring-file ttailored.xml'
 
-#docker
+# Docker aliases
 alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dcc='docker system prune -a --volumes'
 
+# Warp alias
+alias wp='warp-terminal'
+
+# --- Environment Variables ---
+
+# Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Path
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/home/oblivyun/pmd-bin-7.5.0/bin"
 
-export PATH=$PATH:/home/oblivyun/pmd-bin-7.5.0/bin
-
+# Spring Security
 export SPRING_SECURITY_USER_NAME='admin'
 export SPRING_SECURITY_USER_PASSWORD='admin'
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Warp Terminal specific environment variables
+export WARP_ENABLE_WAYLAND=1
+export MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA
+export BROWSER=google-chrome
