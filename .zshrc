@@ -154,9 +154,6 @@ alias wp='warp-terminal'
 # --- Environment Variables ---
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # Path
 export PATH="$HOME/.local/bin:$PATH"
